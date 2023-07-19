@@ -6,16 +6,23 @@ public static class VoxelData
 {
     public static readonly int ChunkWidth = 5;
     public static readonly int ChunkHeight = 15;
+    public static readonly int WorldSizeInChunks = 100;
 
+    public static readonly int ViewDistanceInChunks = 5;
+
+    public static int WorldSizeInVoxels
+    {
+        get { return WorldSizeInChunks * ChunkWidth; }
+    }
+
+    // 存放贴图的尺寸，并且计算出每个贴图所占比例
     public static readonly int TextureAtlasSizeInBlocks = 4;
     public static float NormalizedBlockTextureSize
     {
-        get
-        {
-            return 1.0f / (float)TextureAtlasSizeInBlocks;
-        }
+        get { return 1.0f / (float)TextureAtlasSizeInBlocks; }
     }
 
+    // 保存立方体八个顶点的坐标
     public static readonly Vector3[] voxelVerts = new Vector3[8]
     {
         new Vector3(0.0f, 0.0f, 0.0f),
@@ -28,6 +35,7 @@ public static class VoxelData
         new Vector3(0.0f, 1.0f, 1.0f)
     };
 
+    // 保存立方体六个面的法线 (延伸方向)
     public static readonly Vector3[] faceChecks = new Vector3[6]
     {
         new Vector3(0.0f, 0.0f, -1.0f),
@@ -38,6 +46,7 @@ public static class VoxelData
         new Vector3(1.0f, 0.0f, 0.0f)
     };
 
+    // 保存立方体六个面的顶点索引
     public static readonly int[,] voxelTris = new int[6, 4]
     {
         // 0 1 2 2 1 3
