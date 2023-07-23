@@ -220,5 +220,11 @@
     <None Include="LuaCode\3_luaLoop.lua">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="LuaCode\4_luaOperator.lua">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="LuaCode\5_luaString.lua">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

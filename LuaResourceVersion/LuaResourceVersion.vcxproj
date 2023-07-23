@@ -210,6 +210,8 @@
     <None Include="LuaCode\1_luaDataType.lua" />
     <None Include="LuaCode\2_luaVariable.lua" />
     <None Include="LuaCode\3_luaLoop.lua" />
+    <None Include="LuaCode\4_luaOperator.lua" />
+    <None Include="LuaCode\5_luaString.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
